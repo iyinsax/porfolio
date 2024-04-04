@@ -1,0 +1,127 @@
+.nav-wrapper{
+    padding: 0.5rem 0 ;
+    background: rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 30;
+
+    backdrop-filter: blur(51px);
+}
+.nav-content{
+    max-width: 1300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+.logo{
+    height: auto;
+    width: 8rem;
+}
+
+.nav-content ul{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+
+}
+.nav-content li{
+    margin: 0 1.5rem;
+}
+.menu-item{
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 501;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+
+}
+.menu-item::before{
+    content: "";
+    height: 0.2rem;
+    width: 2rem;
+    border-radius: 0.5rem;
+    position: absolute;
+    bottom: -0.6rem;
+    opacity: 0;
+    transform: translateX(-1.5rem);
+    transition: all 0.3s ease;
+    background: linear-gradient(98deg #a993fe 0% #7e61e7 100%);
+}
+
+.menu-item:hover::before{
+    width: 100%;
+    opacity: 0;
+    transform: translateX(0);
+}
+
+.contact-btn{
+    font-size: 1rem;
+    font-weight: 501;
+    display: flex;
+    align-items: center;
+    border-radius: 0.2rem;
+    outline: 1.5px solid transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0.6rem 2rem ;
+    background: linear-gradient(90deg, #a993fe 0%, #7e61e7 100%);
+    justify-content: center;
+    color: #fff;
+}
+.contact-btn:hover{
+    background: #0000;
+    color: #a993fe;
+    outline: 1.5px solid #a993fe;
+
+
+}
+.menu-btn{
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 0.4rem;
+    line-height: 0;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    display: none;
+    background: linear-gradient(90deg, #a993fe -0.13%, #7e61e7 99.87%);
+    color: #fff;
+}
+.menu-btn:hover{
+    background: #0000;
+    color: #a993fe;
+    border: 1px solid #a993fe;
+}
+
+@media (max-width: 425px) {
+    .logo{
+        height: auto;
+        width: 10rem;
+    }
+}
+
+@media (max-width:769px) {
+    .menu-btn{
+        display: block;
+    }
+    .nav-content ul{
+        display: none;
+
+    }
+    
+}
+@media (max-width: 1325px) {
+    .nav-wrapper{
+        padding: 0 2rem;
+    }
+    
+}
